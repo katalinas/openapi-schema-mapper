@@ -4,12 +4,13 @@ package main
 import (
 	"log"
 
+	"github.com/katalinas/openapi-schema-mapper/internal/config"
 	"github.com/katalinas/openapi-schema-mapper/pkg/mapper"
 )
 
 func main() {
-	config := mapper.Config{
-		SpecsDir: "../specs",
+	config := config.Config{
+		SpecsDir:  "../specs",
 		OutputPkg: "specs",
 	}
 
@@ -18,4 +19,3 @@ func main() {
 	}
 	log.Println("所有 ApiSchemasMap.go 文件生成完成")
 }
-
