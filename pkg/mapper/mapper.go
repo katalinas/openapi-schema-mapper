@@ -6,10 +6,10 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/katalinas/openapi-schema-mapper/internal/config"
 	"github.com/katalinas/openapi-schema-mapper/internal/generator"
 	"github.com/katalinas/openapi-schema-mapper/internal/parser"
 	"github.com/katalinas/openapi-schema-mapper/internal/writer"
+	"github.com/katalinas/openapi-schema-mapper/pkg/config"
 )
 
 func GenerateAll(config config.Config) error {
