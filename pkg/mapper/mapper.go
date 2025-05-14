@@ -6,17 +6,13 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/katalinas/openapi-schema-mapper/internal/config"
 	"github.com/katalinas/openapi-schema-mapper/internal/generator"
 	"github.com/katalinas/openapi-schema-mapper/internal/parser"
 	"github.com/katalinas/openapi-schema-mapper/internal/writer"
 )
 
-type Config struct {
-	SpecsDir  string // OpenAPI规范文件目录
-	OutputPkg string // 生成的Go文件包名
-}
-
-func GenerateAll(config Config) error {
+func GenerateAll(config config.Config) error {
 	mapper := generator.NewTypeMapper()
 	header := fmt.Sprintf("package %s\n\n", config.OutputPkg)
 
